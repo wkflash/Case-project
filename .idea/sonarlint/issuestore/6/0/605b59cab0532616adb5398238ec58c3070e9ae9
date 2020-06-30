@@ -1,0 +1,8 @@
+
+^
+java:S3457#"AFormat specifiers should be used instead of string concatenation.(´â‘8åıå„¯.
+X	java:S125"<This block of commented-out lines of code should be removed.(äßÍ­8’«­×¯.
+M
+java:S1172)"0Remove this unused method parameter "joinPoint".(´×»Ì8ô´«×¯.
+c
+java:S3457*"AFormat specifiers should be used instead of string concatenation.(¦ƒœåıÿÿÿÿ8ãó‡Õ¯.

@@ -1,0 +1,6 @@
+
+m	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹—î™8ÑÅŸ£®.
+j	java:S100Q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯»üù8ÑÅŸ£®.
+j	java:S100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹—î™8ÑÅŸ£®.
+o	java:S116"SRename this field "is_admin" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù™ý°8”Ùž£®.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÜîÆûÿÿÿÿ8éš¡£®.

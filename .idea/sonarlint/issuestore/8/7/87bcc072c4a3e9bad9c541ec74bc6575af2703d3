@@ -1,0 +1,57 @@
+
+p
+java:S2095—"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(“ÙğÁúÿÿÿÿ8—Ùñı®.
+Z
+java:S3752_">Add a "method" parameter to this "@RequestMapping" annotation.(±´Æ:8—Ùñı®.
+q
+java:S3252n"OUse static access with "com.github.pagehelper.page.PageMethod" for "startPage".(³·Ú¼ÿÿÿÿÿ8—Ùñı®.
+Q
+java:S1656d"/Remove or correct this useless self-assignment.(“Ø­şÿÿÿÿ8—Ùñı®.
+ˆ
+java:S4165k"fRemove this useless assignment; "pageSize" already holds the assigned value along all execution paths.(ù†•‡şÿÿÿÿ8—Ùñı®.
+^	java:S125í"<This block of commented-out lines of code should be removed.(øÕÛ¦øÿÿÿÿ8—Ùñı®.
+a
+java:S3752¾">Add a "method" parameter to this "@RequestMapping" annotation.(Æ›êßÿÿÿÿÿ8ñ•ºÉ¯.
+a
+java:S3752Û">Add a "method" parameter to this "@RequestMapping" annotation.(öø†Ûşÿÿÿÿ8—Ùñı®.
+]
+java:S2441<"@Make "UserEntity" serializable or don't store it in the session.(şËÜ¹8ÀşÚ®.
+]
+java:S2441B"@Make "UserEntity" serializable or don't store it in the session.(úÆè“8Ìè¯®.
+v
+java:S2293r"YReplace the type specification in this constructor call with the diamond operator ("<>").(şÖİ8—Ùñı®.
+Y	java:S125ù"<This block of commented-out lines of code should be removed.(‚¸°8—Ùñı®.
+\
+java:S3752ß">Add a "method" parameter to this "@RequestMapping" annotation.(ÁÃ€±8¼ßàÚ¯.
+m
+java:S3027D"KPut single-quotes around '\\' to use the faster "lastIndexOf(char)" method.(Á¸–ßúÿÿÿÿ8¦®˜ş®.
+c	java:S112•"FDefine and throw a dedicated exception instead of using a generic one.(Ñ¯£ø8—Ùñı®.
+‡
+java:S4165d"eRemove this useless assignment; "pageNum" already holds the assigned value along all execution paths.(“Ø­şÿÿÿÿ8—Ùñı®.
+j
+java:S1192å"GDefine a constant instead of duplicating this literal "upload" 3 times.(Åí’‚ıÿÿÿÿ8—Ùñı®.
+\
+java:S3752ÿ">Add a "method" parameter to this "@RequestMapping" annotation.(Œ…ô·8—Ùñı®.
+j
+java:S2441p"MMake "List" and its parameters serializable or don't store it in the session.(àÓˆŒ8—Ùñı®.
+`
+java:S3752)">Add a "method" parameter to this "@RequestMapping" annotation.(ˆ»™ùÿÿÿÿ8Â”Ü¨®.
+a
+java:S3752Ÿ">Add a "method" parameter to this "@RequestMapping" annotation.(Çö¦Øùÿÿÿÿ8—Ùñı®.
+L
+java:S1481ï")Remove this unused "size" local variable.(¢ÀšÎûÿÿÿÿ8—Ùñı®.
+Y	java:S125›"<This block of commented-out lines of code should be removed.(Œúª8ëÁÓÙ¯.
+a
+java:S3752Î">Add a "method" parameter to this "@RequestMapping" annotation.(ÿ°Üúıÿÿÿÿ8ìßÓÙ¯.
+[
+java:S1854ï"8Remove this useless assignment to local variable "size".(¢ÀšÎûÿÿÿÿ8—Ùñı®.
+Z
+java:S3752z">Add a "method" parameter to this "@RequestMapping" annotation.(ò²Ú8—Ùñı®.
+^
+java:S2441×"@Make "UserEntity" serializable or don't store it in the session.(á·©º8ìßÓÙ¯.
+Q
+java:S1656k"/Remove or correct this useless self-assignment.(ù†•‡şÿÿÿÿ8—Ùñı®.
+g
+java:S3027ğ"JPut single-quotes around '.' to use the faster "lastIndexOf(char)" method.(¦Æ’n8—Ùñı®.
+a
+java:S3752“">Add a "method" parameter to this "@RequestMapping" annotation.(Êíˆşÿÿÿÿ8—Ùñı®.

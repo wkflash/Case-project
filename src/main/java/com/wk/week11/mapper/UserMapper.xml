@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wk.week11.mapper.UserMapper">
+
+    <select id="login" resultType="com.wk.week11.entity.UserEntity">
+        select  id,`name`,`password`,email,image,is_admin from t_user where `name`=#{name} and `password`=#{password}
+    </select>
+
+    <select id="findUserByName" resultType="com.wk.week11.entity.UserEntity">
+        select  `name` from t_user where `name`=#{name}
+    </select>
+
+    <select id="findUserByEmail" resultType="com.wk.week11.entity.UserEntity">
+        select  email from t_user where email=#{email}
+    </select>
+
+    <insert id="addUser" >
+        insert into t_user(`name`,`password`,image,email) values(#{name},#{password},#{image},#{email})
+    </insert>
+
+    <select id="getUserList" resultType="com.wk.week11.entity.UserEntity">
+        select  id,`name`,`password`,image,email from t_user
+    </select>
+
+    <delete id="delUser">
+        delete from t_user where id=#{id}
+    </delete>
+
+    <select id="getUserById" resultType="com.wk.week11.entity.UserEntity">
+        select id,`name`,`password`,email from t_user where id=#{id}
+    </select>
+
+    <update id="updUser" >
+        update  t_user set `name`=#{name},`password`=#{password},email=#{email}  where id=#{id}
+    </update>
+
+</mapper>

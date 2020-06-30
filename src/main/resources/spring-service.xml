@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--针对我们代码的service进行事务管理; 使用aspectj来进行事务管理-->
+    <!-- 配置事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 开启注解方式声明事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+    <!-- 配置事务通知 -->
+    <tx:advice transaction-manager="transactionManager" id="tx">
+        <tx:attributes>
+
+            <tx:method name="sel*" propagation="SUPPORTS" read-only="true"></tx:method>
+            <tx:method name="query*" propagation="SUPPORTS" read-only="true"></tx:method>
+            <tx:method name="get*" propagation="SUPPORTS" read-only="true"></tx:method>
+
+            <tx:method name="change*" propagation="SUPPORTS"></tx:method>
+
+            <!--只要以add,del,upd开头的,咱们就用事务;-->
+            <tx:method name="add*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="Exception"/>
+            <tx:method name="del*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="Exception"/>
+            <tx:method name="upd*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="Exception"/>
+
+            <!--其他的就不用事务-->
+            <tx:method name="*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="Exception"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 配置将事务管理策略应用到哪些方法上 -->
+    <aop:config>
+        <aop:pointcut id="mpt" expression="execution(* com.wk.week11.biz.*.*(..))" />
+        <aop:advisor advice-ref="tx" pointcut-ref="mpt" />
+    </aop:config>
+
+    <!--将LoggerAspectj类交给spring去ioc-->
+    <bean id="loggerAspectj" class="com.wk.week11.aspectj.LoggerAspectj"></bean>
+
+    <!--配置AOP-->
+    <aop:config>
+        <!--配置切入点-->
+        <aop:pointcut id="pointcut" expression="execution(* com.wk.week11.biz..*(..))"/>
+        <!--配置切面,ref是配置哪个类bean-->
+        <aop:aspect ref="loggerAspectj">
+            <!--配置前置通知-->
+            <aop:before method="beforeLogger" pointcut-ref="pointcut"></aop:before>
+            <!--配置异常通知-->
+            <aop:after-throwing method="afterThrowing" pointcut-ref="pointcut" throwing="ex"></aop:after-throwing>
+        </aop:aspect>
+    </aop:config>
+
+</beans>

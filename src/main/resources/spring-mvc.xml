@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/aop
+       https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--spring负责扫描该包下面所有的类;有注解的就交给spring去IOC-->
+    <context:component-scan base-package="com.wk.week11"></context:component-scan>
+
+    <!--注解配置AOP，如果是用xml配置就不需要这一句，注释掉-->
+<!--    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>-->
+
+    <!--注册我们mvc需要的bean-->
+    <mvc:annotation-driven></mvc:annotation-driven>
+
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <bean class="com.wk.week11.interceptor.Interceptor"></bean>
+    </mvc:interceptors>
+
+    <!--视图解析器-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--配置一个文件上传的bean;文件上传的所有步骤,交给spring去做;-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 最大可上传的文件大小  单位：byte  超出后会抛出MaxUploadSizeExceededException异常，可以异常解析器捕获 -->
+        <property name="maxUploadSize" value="3145728"></property>
+    </bean>
+
+
+</beans>

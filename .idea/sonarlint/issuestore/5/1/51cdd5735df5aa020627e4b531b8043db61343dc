@@ -1,0 +1,7 @@
+
+PWeb:AvoidCommentedOutCodeCheck="Remove this commented out code.(ÝðÉÏ8¹†¾£®.
+OWeb:BoldAndItalicTagsCheckC"Replace this <i> tag by <em>.(Þæµ®ÿÿÿÿÿ8¹†¾£®.
+K	Web:S1827G"/Remove this deprecated "frameborder" attribute.(…²¨†8¹†¾£®.
+JWeb:BoldAndItalicTagsCheck "Replace this <i> tag by <em>.(ªû÷£8¹†¾£®.
+ZWeb:FrameWithoutTitleCheckG"-Add a "title" attribute to this <iframe> tag.(…²¨†8¹†¾£®.
+I	Web:S1827G"-Remove this deprecated "scrolling" attribute.(…²¨†8¹†¾£®.
